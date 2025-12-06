@@ -70,7 +70,7 @@ export function SiteHeader({ config, socials }: SiteHeaderProps) {
                 href={item.href}
                 className={clsx(
                   "rounded-full px-3 py-1 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-white",
-                  isActive && "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900",
+                  isActive && "bg-black text-white",
                 )}
               >
                 {item.label}
