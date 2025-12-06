@@ -23,23 +23,42 @@ latest_posts:
 research:
   title: Research
   items:
-    - title: "ML & Data Science"
-      description: Advanced neural architectures and optimization techniques for complex pattern recognition.
-    - title: "Computer Vision"
-      description: Visual understanding systems for medical imaging, autonomous systems, and multimedia analysis.
+    - title: "Artificial Intelligence & Machine Learning"
+      description: Developing advanced predictive, generative, and reasoning models.
     - title: "Natural Language Processing"
-      description: Language understanding and generation systems with focus on multilingual and domain-specific applications.
-    - title: "Reinforcement Learning"
-      description: Developing agents that learn to make optimal decisions in an environment to maximize a reward signal.
-    - title: "Internet of Things"
-      description: Edge intelligence for connected campuses and industry networks, unifying sensing, actuation, and secure data flows.
-    - title: "Quantum Computing"
-      description: Exploring hybrid quantum-classical pipelines to accelerate optimization and simulation for AI workloads.
+      description: Researching language understanding, computational linguistics, conversational AI, and modern LLM applications.
+    - title: "Generative AI & Creativity"
+      description: Exploring text, image, and multimodal generation powered by deep learning.
+    - title: "Data Science & Visualization"
+      description: Extracting insights from complex data through modeling, analytics, and visual storytelling.
+    - title: "Digital Humanities & Computational Creativity"
+      description: Bridging technology with mythology, culture, literature, and human narratives.
 ---
 
-Aethersaga AI is the applied research group born out of [Sister Nivedita University](https://snuniv.ac.in) where faculty, researchers, and students gather to imagine friendlier, smarter machines.
-We care about translating rigorous AI breakthroughs into tangible, community-focused impact.
+# Where Intelligence Meets Imagination
 
-We advance the frontier of artificial intelligence by developing systems that not only process information but also acquire, reason with, and co-design tools with partners invested in education, healthcare, and sustainable cities.
+AetherSaga is a multidisciplinary research-driven group dedicated to exploring the next generation of AI, ML, and NLP technologies. 
+AetherSaga is a research group, born out of SNU, exploring cutting-edge advancements in Artificial Intelligence, Machine Learning, and Natural Language Processing. We focus on building intelligent systems that understand, reason, and create, while integrating insights from data science, and digital humanities. We as a team work on innovative NLP models, generative AI applications, computational creativity, and real-world AI solutions.  Through collaboration and curiosity, we aim to push the boundaries of AI research and contribute meaningful advancements to the scientific community.
 
-If you want the receipts, wander through our [publications](/publications), meet the humans behind the work on [people](/people), explore the messy builds on our [projects](/projects) page, or slide over to [join](/join) when you are ready to collaborate.
+We aim to create impactful, innovative, and ethically aligned AI research that empowers society and inspires future discoveries.
+
+Our mission is to advance intelligent technologies by conducting high-quality, interdisciplinary research in AI, ML, and Natural Language Processing.
+
+ We aspire to build technologies that are not only powerful and scalable but also ethical, inclusive, and meaningful—shaping a future where intelligent systems enrich knowledge, creativity, and human potential.
+
+
+Core Research Domains: 
+Artificial Intelligence & Machine Learning
+Developing advanced predictive, generative, and reasoning models.
+
+Natural Language Processing
+Researching language understanding, computational linguistics, conversational AI, and modern LLM applications.
+
+Generative AI & Creativity
+Exploring text, image, and multimodal generation powered by deep learning.
+
+Data Science & Visualization
+Extracting insights from complex data through modeling, analytics, and visual storytelling.
+
+Digital Humanities & Computational Creativity
+Bridging technology with mythology, culture, literature, and human narratives.
