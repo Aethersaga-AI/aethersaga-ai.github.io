@@ -19,13 +19,35 @@ export function SiteHeader({ config, socials }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/80">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-0">
-        <div className="flex flex-col">
-          <Link href="/" className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
-            {fullName}
-          </Link>
-          {config.description ? (
-            <p className="max-w-xl text-sm text-slate-600 dark:text-slate-400">{config.description}</p>
-          ) : null}
+        <div className="flex items-center gap-4">
+          {/* Vortex Logo */}
+          <div className="w-12 h-12 flex-shrink-0">
+            <svg className="vortex w-full h-full animate-spin" style={{animationDuration: '12s'}} viewBox="-60 -60 120 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="metal-shine" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#4a4a4a" />
+                  <stop offset="30%" stopColor="#7a7a7a" />
+                  <stop offset="50%" stopColor="#ffffff" />
+                  <stop offset="70%" stopColor="#7a7a7a" />
+                  <stop offset="100%" stopColor="#4a4a4a" />
+                </linearGradient>
+                <path id="blade" d="M 25 -5 C 35 -25, 48 -25, 55 -10 L 52 -7 C 46 -20, 32 -18, 26 0 Z" />
+              </defs>
+              <g>
+                {Array.from({length: 36}, (_, i) => (
+                  <use key={i} href="#blade" fill="url(#metal-shine)" transform={`rotate(${i * 10})`} />
+                ))}
+              </g>
+            </svg>
+          </div>
+          <div className="flex flex-col">
+            <Link href="/" className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+              {fullName}
+            </Link>
+            {config.description ? (
+              <p className="max-w-xl text-sm text-slate-600 dark:text-slate-400">{config.description}</p>
+            ) : null}
+          </div>
         </div>
         <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
           {NAV_ITEMS.map((item) => {

@@ -13,7 +13,7 @@ export default async function ProjectsPage() {
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 py-12 lg:px-0">
       <PageHeader
         title="Projects"
-  description="Active collaborations, prototypes, and data resources from the Aethersaga AI lab."
+        description="Active collaborations, prototypes, and data resources from the Aethersaga AI lab."
       />
 
       <section className="space-y-4">
