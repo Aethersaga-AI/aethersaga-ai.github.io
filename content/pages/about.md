@@ -35,8 +35,6 @@ research:
       description: Bridging technology with mythology, culture, literature, and human narratives.
 ---
 
-# Where Intelligence Meets Imagination
-
 AetherSaga is a multidisciplinary research-driven group dedicated to exploring the next generation of AI, ML, and NLP technologies. 
 AetherSaga is a research group, born out of SNU, exploring cutting-edge advancements in Artificial Intelligence, Machine Learning, and Natural Language Processing. We focus on building intelligent systems that understand, reason, and create, while integrating insights from data science, and digital humanities. We as a team work on innovative NLP models, generative AI applications, computational creativity, and real-world AI solutions.  Through collaboration and curiosity, we aim to push the boundaries of AI research and contribute meaningful advancements to the scientific community.
 
