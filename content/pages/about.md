@@ -27,6 +27,8 @@ research:
       description: Developing advanced predictive, generative, and reasoning models.
     - title: "Natural Language Processing"
       description: Researching language understanding, computational linguistics, conversational AI, and modern LLM applications.
+    - title: "Information Retrieval"
+      description: Building efficient search systems, recommendation engines, and knowledge discovery tools.
     - title: "Generative AI & Creativity"
       description: Exploring text, image, and multimodal generation powered by deep learning.
     - title: "Data Science & Visualization"
