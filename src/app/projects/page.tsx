@@ -8,6 +8,7 @@ export const metadata = {
 
 export default async function ProjectsPage() {
   const projects = await getProjects();
+  console.log('Projects loaded:', projects.length);
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 py-12 lg:px-0">
       <PageHeader
@@ -28,13 +29,10 @@ export default async function ProjectsPage() {
             >
               {project.data.img ? (
                 <div className="relative h-48 w-full">
-                  <Image
+                  <img
                     src={`/${project.data.img?.replace(/^\//, "")}`}
                     alt={project.data.title}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover"
-                    priority={index === 0}
+                    className="h-full w-full object-cover"
                   />
                 </div>
               ) : null}

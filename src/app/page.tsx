@@ -33,11 +33,18 @@ export default async function Home() {
             } md:max-w-xs`}
           >
             <div className="relative w-full max-w-xs overflow-hidden">
-              <Image
+              {/* <Image
                 src={`/${about.data.profile.image.replace(/^\//, "")}`}
                 alt={about.data.title ?? "Profile picture"}
                 width={320}
                 height={320}
+                className={`h-auto w-full object-cover ${
+                  about.data.profile.image_circular ? "rounded-full" : "rounded-2xl"
+                }`}
+              /> */}
+              <img
+                src={`/${about.data.profile.image.replace(/^\//, "")}`}
+                alt={about.data.title ?? "Profile picture"}
                 className={`h-auto w-full object-cover ${
                   about.data.profile.image_circular ? "rounded-full" : "rounded-2xl"
                 }`}

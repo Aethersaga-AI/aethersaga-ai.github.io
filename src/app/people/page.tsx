@@ -413,12 +413,9 @@ export default function PeoplePage() {
 							<div className="flex items-center gap-4">
 								{member.image ? (
 									<div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-900">
-										<Image
+										<img
 											src={`/${member.image.replace(/^\//, "")}`}
 											alt={member.name}
-											width={64}
-											height={64}
-											sizes="64px"
 											className="h-full w-full object-cover"
 										/>
 									</div>
@@ -505,12 +502,9 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 					<div className="flex items-start gap-4">
 						{member.image ? (
 							<div className="relative hidden h-20 w-20 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 sm:block dark:border-slate-800 dark:bg-slate-900">
-								<Image
+								<img
 											src={`/${member.image.replace(/^\//, "")}`}
 									alt={member.name}
-									width={80}
-									height={80}
-									sizes="80px"
 									className="h-full w-full object-cover"
 								/>
 							</div>
