@@ -37,28 +37,6 @@ research:
       description: Bridging technology with mythology, culture, literature, and human narratives.
 ---
 
-AetherSaga is a multidisciplinary research-driven group dedicated to exploring the next generation of AI, ML, and NLP technologies. 
-AetherSaga is a research group, born out of SNU, exploring cutting-edge advancements in Artificial Intelligence, Machine Learning, and Natural Language Processing. We focus on building intelligent systems that understand, reason, and create, while integrating insights from data science, and digital humanities. We as a team work on innovative NLP models, generative AI applications, computational creativity, and real-world AI solutions.  Through collaboration and curiosity, we aim to push the boundaries of AI research and contribute meaningful advancements to the scientific community.
+AetherSaga is a multidisciplinary research-driven group dedicated to exploring the next generation of AI, ML, and NLP technologies. The group, born out of Sister Nivedita University, Kolkata, India, explored cutting-edge advancements in Artificial Intelligence, Machine Learning, and Natural Language Processing. The primary focus lies on innovative NLP models, generative AI applications, computational creativity, and real-world AI solutions. Through collaboration and curiosity, the aim is to push the boundaries of AI research and contribute meaningful advancements to the scientific community.
 
-We aim to create impactful, innovative, and ethically aligned AI research that empowers society and inspires future discoveries.
-
-Our mission is to advance intelligent technologies by conducting high-quality, interdisciplinary research in AI, ML, and Natural Language Processing.
-
- We aspire to build technologies that are not only powerful and scalable but also ethical, inclusive, and meaningful—shaping a future where intelligent systems enrich knowledge, creativity, and human potential.
-
-
-Core Research Domains: 
-Artificial Intelligence & Machine Learning
-Developing advanced predictive, generative, and reasoning models.
-
-Natural Language Processing
-Researching language understanding, computational linguistics, conversational AI, and modern LLM applications.
-
-Generative AI & Creativity
-Exploring text, image, and multimodal generation powered by deep learning.
-
-Data Science & Visualization
-Extracting insights from complex data through modeling, analytics, and visual storytelling.
-
-Digital Humanities & Computational Creativity
-Bridging technology with mythology, culture, literature, and human narratives.
+The team aims to create impactful, innovative, and ethically aligned AI research that empowers society and inspires future discoveries. Our mission is to advance intelligent technologies by conducting high-quality, interdisciplinary research in AI, ML, and Natural Language Processing. The team aspires to build technologies that are not only powerful and scalable but also ethical, inclusive, and meaningful, shaping a future where intelligent systems enrich knowledge, creativity, and human potential.
