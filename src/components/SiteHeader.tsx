@@ -17,7 +17,7 @@ export function SiteHeader({ config, socials }: SiteHeaderProps) {
   const fullName = buildFullName(config);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/80">
+    <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur dark:border-slate-800/60 dark:bg-[#030b19]/90">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-0">
         <div className="flex items-center gap-4">
           {/* Vortex Logo */}
