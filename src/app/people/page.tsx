@@ -273,24 +273,6 @@ const MEMBERS: Member[] = [
 		},
 	},
 	{
-		id: "anusha-gupta",
-		image: "assets/img/profile_pictures/anusha-gupta.png",
-		name: "Anusha Gupta",
-		role: "Research Student",
-		focus: "Web Development, Python, Frontend/UI-UX, Cybersecurity, ML/AI",
-		details: {
-			about:
-				"Third-year B.Tech student who learns by building—mixing web development, Python, front-end design, and practical security projects while keeping curiosity across ML/AI and creative hobbies.",
-			researchFocus: ["Web Development", "Python", "Front-end/UI-UX", "Cybersecurity", "Machine Learning & AI"],
-			education: "B.Tech CSE, Year 3 (Section 6) – Sister Nivedita University",
-			researchInterests: ["Full-stack Prototyping", "Design Systems", "Hands-on Security", "Applied ML"],
-			links: [
-				{ label: "Email", url: "mailto:anusha73gupta@gmail.com" },
-				{ label: "LinkedIn", url: "https://www.linkedin.com/in/anusha-gupta-ofc" },
-			],
-		},
-	},
-	{
 		id: "prithwish-ghosh",
 		image: "assets/img/profile_pictures/prithwish-ghosh.png",
 		name: "Prithwish Ghosh",
@@ -323,24 +305,6 @@ const MEMBERS: Member[] = [
 			links: [
 				{ label: "Email", url: "mailto:planticed@gmail.com" },
 				{ label: "LinkedIn", url: "https://www.linkedin.com/in/rupam-neogi-bb8734353" },
-			],
-		},
-	},
-	{
-		id: "sinjini-ghosh",
-		image: "assets/img/profile_pictures/sinjini-ghosh.png",
-		name: "Sinjini Ghosh",
-		role: "Research Student",
-		focus: "Front-end Development, UI/UX Design, Graphic Design",
-		details: {
-			about:
-				"Tech-focused student who enjoys crafting interfaces where design, user experience, and front-end engineering come together to feel effortless.",
-			researchFocus: ["Front-end Development", "UI/UX Design", "Graphic Design"],
-			education: "B.Tech CSE, Year 3 (Section 6) – Sister Nivedita University",
-			researchInterests: ["Design Systems", "Interaction Design", "Creative Coding"],
-			links: [
-				{ label: "Email", url: "mailto:altoclef777@gmail.com" },
-				{ label: "LinkedIn", url: "https://www.linkedin.com/in/sinjini-ghosh-45b58a284" },
 			],
 		},
 	},
