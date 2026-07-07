@@ -15,39 +15,39 @@ export default function PublicationsPage() {
         description="Selected research outputs and peer-reviewed work."
       />
 
-      <div className="space-y-8">
+      <div className="space-y-12">
         {publications.map((group) => (
-          <section key={group.year} className="space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{group.year}</h2>
+          <section key={group.year} className="space-y-5">
+            <h2 className="text-lg font-semibold text-slate-500 dark:text-slate-400">{group.year}</h2>
             <ol className="space-y-4">
               {group.entries.map((entry) => (
                 <li
                   key={entry.id}
-                  className="rounded-xl border border-slate-200 p-4 shadow-sm dark:border-slate-800"
+                  className="rounded-xl border border-slate-200 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md hover:shadow-slate-200/60"
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                  <div className="flex flex-wrap items-baseline gap-x-2">
+                    <h3 className="font-medium text-slate-900">
                       {entry.title}
                     </h3>
                     {entry.selected ? (
-                      <span className="rounded-full bg-slate-900 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white dark:bg-slate-100 dark:text-slate-900">
+                      <span className="text-xs uppercase tracking-wide text-slate-400">
                         Selected
                       </span>
                     ) : null}
                   </div>
                   {entry.authors ? (
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{entry.authors}</p>
+                    <p className="mt-1 text-sm text-slate-600">{entry.authors}</p>
                   ) : null}
                   {entry.venue ? (
-                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-500">{entry.venue}</p>
+                    <p className="mt-1 text-sm text-slate-500">{entry.venue}</p>
                   ) : null}
-                  <div className="mt-3 flex flex-wrap items-center gap-3 text-xs font-medium text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 text-sm text-slate-500">
                     {entry.url ? (
                       <a
                         href={normalizeLink(entry.url)}
                         target="_blank"
                         rel="noreferrer"
-                        className="rounded-full bg-slate-900 px-3 py-1 text-white hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
+                        className="text-slate-900 underline underline-offset-2 hover:no-underline dark:text-slate-100"
                       >
                         View
                       </a>
@@ -57,7 +57,7 @@ export default function PublicationsPage() {
                         href={normalizeLink(entry.pdf)}
                         target="_blank"
                         rel="noreferrer"
-                        className="rounded-full bg-slate-100 px-3 py-1 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                        className="text-slate-900 underline underline-offset-2 hover:no-underline dark:text-slate-100"
                       >
                         PDF
                       </a>
@@ -67,7 +67,7 @@ export default function PublicationsPage() {
                         href={normalizeLink(entry.html)}
                         target="_blank"
                         rel="noreferrer"
-                        className="rounded-full bg-slate-100 px-3 py-1 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                        className="text-slate-900 underline underline-offset-2 hover:no-underline dark:text-slate-100"
                       >
                         HTML
                       </a>

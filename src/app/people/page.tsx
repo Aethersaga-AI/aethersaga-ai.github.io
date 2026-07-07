@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { PageHeader } from "@/components/PageHeader";
@@ -43,15 +42,34 @@ const MEMBERS: Member[] = [
 	{
 		id: "swarup-ghosh",
 		image: "assets/img/profile_pictures/swarup-kumar-ghosh.jpg",
-		name: "Dr. Swarup Kumar Ghosh",
+		name: "Dr. Swarup Kr Ghosh",
 		role: "Associate Professor",
-		focus: "Medical Image Analysis, Soft Computing, Bioinformatics",
+		focus: "Machine Learning, Computational Modelling, Data Science, Bioinformatics, Medical Imaging, Quantum Computing",
 		details: {
 			about:
-				"Associate Professor of Computer Science & Engineering at Sister Nivedita University focusing on medical imaging, fuzzy soft set theory, and AI-driven diagnostics.",
-			researchFocus: ["Medical Image Analysis", "Soft Computing", "Bioinformatics", "Deep Learning"],
-			education: "Ph.D. in CSE – MAKAUT, WB; M.Tech (IT) – University of Calcutta",
-			researchInterests: ["Medical Image Analysis", "Bioinformatics", "Soft Computing", "Deep Learning", "Computer Vision"],
+				"Dr. Swarup Kr Ghosh is an Associate Professor in the Department of Computer Science & Engineering at Sister Nivedita University, Kolkata, India. He received his Ph.D. from MAKAUT in 2023 and a Master of Technology from the University of Calcutta. With 12 years of teaching and 13 years of research experience, his work spans machine learning, computational modelling, data science and analytics, bioinformatics and computational biology, medical imaging, and quantum computing, with a growing focus on AI-driven, data-centric, and user-oriented system design. His research addresses contemporary, globally relevant challenges in scalable computing, intelligent platforms, and digital transformation.",
+			researchFocus: [
+				"Machine Learning",
+				"Computational Modelling",
+				"Data Science & Analytics",
+				"Bioinformatics & Computational Biology",
+				"Medical Imaging",
+				"Quantum Computing",
+			],
+			education: "Ph.D. – MAKAUT (2023); M.Tech – University of Calcutta",
+			researchInterests: [
+				"High Performance Computing",
+				"Computational Modeling",
+				"Data Analytics",
+				"AI/ML-based Systems",
+				"Quantum Computing",
+			],
+			experience:
+				"12 years of teaching and 13 years of research experience. Previously Assistant Professor at the National Power Training Institute (ER), Durgapur, and a research assistant at the Indian Institute of Management Calcutta.",
+			publicationsSummary:
+				"45+ peer-reviewed research articles (SCI/SCIE/ESCI) and conference papers with leading outlets including IEEE, Springer, Elsevier, and MDPI, along with twelve authored book chapters. Holds 4 design patents in intelligent web interfaces and user-centric system architecture, with additional Indian patents filed in artificial intelligence.",
+			awards:
+				"Young Research Award 2021 from the Institute of Scholars. Member of IEEE. Faculty exchange visit and invited talk at Sichuan Vocational College of Information Technology, China (2024 and 2025). Reviewer for IEEE Transactions on Medical Imaging, IEEE Access, IEEE Transactions on Computational Biology and Bioinformatics, Applied Soft Computing (Elsevier), Information Processing and Management (Elsevier), Neurocomputing (Elsevier), Scientific Reports, Artificial Intelligence Review (Springer), Multimedia Tools and Applications (Springer), IET Systems Biology, IET Image Processing, and The Computer Journal (Oxford Academic), among others.",
 			academicMetrics: "Google Scholar reports 850+ citations, h-index 18, i10-index 30 (profile accessed November 2025).",
 			notablePublications: [
 				{
@@ -88,8 +106,11 @@ const MEMBERS: Member[] = [
 				},
 			],
 			links: [
-				{ label: "Email", url: "mailto:swarup.ghosh@snu.edu.in" },
+				{ label: "Email", url: "mailto:swarupg1@gmail.com" },
+				{ label: "IEEE Email", url: "mailto:swarup@ieee.org" },
+				{ label: "LinkedIn", url: "https://www.linkedin.com/in/dr-swarup-kr-ghosh-b8782557/" },
 				{ label: "Google Scholar", url: "https://scholar.google.com/citations?user=1NU_3oEAAAAJ&hl=en" },
+				{ label: "Vidwan", url: "https://vidwan.inflibnet.ac.in/profile/458766" },
 			],
 		},
 	},
@@ -98,13 +119,27 @@ const MEMBERS: Member[] = [
 		image: "assets/img/profile_pictures/sayani-mondal-cse.jpg",
 		name: "Dr. Sayani Mondal",
 		role: "Assistant Professor",
-		focus: "NLP, Software Engineering, Program Comprehension, ML",
+		focus: "Software Engineering (Program Comprehension), NLP, Machine Learning, Human-Computer Interaction",
 		details: {
 			about:
-				"Assistant Professor in Computer Science & Engineering at Sister Nivedita University, examining human factors in software engineering, program comprehension, and NLP-powered development tools.",
-			researchFocus: ["Natural Language Processing", "Human Factors in Software Engineering", "Program Comprehension", "Machine Learning"],
-			education: "Ph.D. in Computer Science",
-			researchInterests: ["Program Comprehension", "Eye-gaze Analytics", "Developer Productivity", "Applied NLP"],
+				"Dr. Sayani Mondal is an Assistant Professor in the Department of Computer Science and Engineering at Sister Nivedita University, Kolkata. She earned her Ph.D. (2022) and M.Tech. (2013) from the Indian Institute of Technology Kharagpur, where her doctoral work investigated the assessment of software productivity through the analysis of code reading patterns in C programs using eye-gaze tracking. Her research interests encompass Software Engineering (Program Comprehension), Natural Language Processing, Machine Learning, and Human-Computer Interaction. She has developed several research datasets, spanning code comprehension, Bengali emotion recognition, and automatic question generation, and her work has appeared in reputed venues including ACL workshops, IEEE conferences, and Sādhanā.",
+			researchFocus: [
+					"Software Engineering (Program Comprehension)",
+					"Natural Language Processing",
+					"Machine Learning",
+					"Human-Computer Interaction",
+				],
+			education: "Ph.D. (2022) and M.Tech. (2013) – Indian Institute of Technology Kharagpur",
+			researchInterests: [
+				"Program Comprehension",
+				"Applied NLP",
+				"Machine Learning",
+				"Human-Computer Interaction",
+			],
+			experience:
+				"More than a decade of academic and research experience, having previously served premier institutes and supervised over 35 Bachelor's and Master's theses.",
+			publicationsSummary:
+				"Work published in reputed venues including ACL workshops, IEEE conferences, and Sādhanā, alongside several research datasets in code comprehension, Bengali emotion recognition, and automatic question generation. Holds three Indian patent filings and serves as a reviewer for international venues such as WSSE, ICME, and the Software Quality Journal.",
 			notablePublications: [
 				{
 					title: "A survey-based study to understand various aspects of Kanban",
@@ -139,8 +174,9 @@ const MEMBERS: Member[] = [
 			],
 			academicMetrics: "Google Scholar reports single-digit citation counts across recent program comprehension studies (profile accessed November 2025).",
 			links: [
-				{ label: "Email", url: "mailto:sayani.mondal@snu.edu.in" },
-				{ label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=AcyJPE0AAAAJ" },
+				{ label: "Email", url: "mailto:sayani.mondal9@gmail.com" },
+				{ label: "LinkedIn", url: "https://www.linkedin.com/in/sayani-mondal-b8146236" },
+				{ label: "Google Scholar", url: "https://scholar.google.co.in/citations?user=OTpaGusAAAAJ&hl=en" },
 			],
 		},
 	},
@@ -240,20 +276,6 @@ const MEMBERS: Member[] = [
 		},
 	},
 	{
-		id: "sohan-das",
-		image: "assets/img/profile_pictures/sohan-das.jpeg",
-		name: "Sohan Das",
-		role: "Research Student",
-		focus: "Computer Vision",
-		details: {
-			about: "Sohan builds efficient neural architectures for on-device scene understanding.",
-			researchFocus: ["Computer Vision", "Edge AI"],
-			education: "B.Tech",
-			researchInterests: ["Edge Computing", "Object Detection"],
-			links: [{ label: "Email", url: "mailto:sohan.das@snu.edu.in" }],
-		},
-	},
-	{
 		id: "ahana-dasgupta",
 		image: "assets/img/profile_pictures/ahana-dasgupta.png",
 		name: "Ahana Dasgupta",
@@ -287,24 +309,6 @@ const MEMBERS: Member[] = [
 			links: [
 				{ label: "Email", url: "mailto:prithwishg95@gmail.com" },
 				{ label: "LinkedIn", url: "https://linkedin.com/in/prithwish-ghosh-ml" },
-			],
-		},
-	},
-	{
-		id: "rupam-neogi",
-		image: "assets/img/profile_pictures/rupam-neogi.jpg",
-		name: "Rupam Neogi",
-		role: "Research Student",
-		focus: "Reinforcement Learning & Machine Learning",
-		details: {
-			about:
-				"B.Tech student diving into machine learning and reinforcement learning while staying curious about emerging ideas that push intelligent systems forward.",
-			researchFocus: ["Machine Learning", "Reinforcement Learning"],
-			education: "B.Tech CSE, Year 2 (Section 1) – Sister Nivedita University",
-			researchInterests: ["Reinforcement Learning", "Innovative ML Ideas"],
-			links: [
-				{ label: "Email", url: "mailto:planticed@gmail.com" },
-				{ label: "LinkedIn", url: "https://www.linkedin.com/in/rupam-neogi-bb8734353" },
 			],
 		},
 	},
@@ -358,61 +362,53 @@ export default function PeoplePage() {
 	};
 
 	return (
-		<div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-12 lg:px-0">
+		<div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-4 py-16 lg:px-0">
 			<PageHeader
 				title="People"
-				description="Meet the brilliant minds driving innovation in machine learning research at Aethersaga."
+				description="The people driving machine learning research at Aethersaga."
 			/>
 
-			<section>
+			<section className="border-t border-slate-200 pt-10 dark:border-slate-800">
 				<h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Members</h2>
-				<div className="mt-6 grid gap-6 md:grid-cols-2">
+				<div className="mt-6 grid gap-4 sm:grid-cols-2">
 					{MEMBERS.map((member) => (
 						<button
 							type="button"
 							key={member.id}
 							onClick={()=>handleOpen(member)}
-							className="rounded-2xl border border-slate-200 bg-white/80 p-6 text-left shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg focus:outline-none focus-visible:ring focus-visible:ring-slate-400/60 dark:border-slate-800 dark:bg-slate-900/40 dark:hover:border-slate-700"
+							className="group flex items-center gap-4 rounded-xl border border-slate-200 p-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md hover:shadow-slate-200/60 focus:outline-none"
 						>
-							<div className="flex items-center gap-4">
-								{member.image ? (
-									<div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-900">
-										<img
-											src={`/${member.image.replace(/^\//, "")}`}
-											alt={member.name}
-											className="h-full w-full object-cover"
-										/>
-									</div>
-								) : null}
-								<div>
-									<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{member.name}</h3>
-									<p className="mt-1 text-sm font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
-										{member.role}
-									</p>
+							{member.image ? (
+								<div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+									<img
+										src={`/${member.image.replace(/^\//, "")}`}
+										alt={member.name}
+										className="h-full w-full object-cover"
+									/>
 								</div>
+							) : null}
+							<div>
+								<h3 className="font-medium text-slate-900 group-hover:underline group-hover:underline-offset-2 dark:text-slate-100">{member.name}</h3>
+								<p className="text-sm text-slate-500 dark:text-slate-400">{member.role}</p>
+								<p className="mt-0.5 text-sm text-slate-600 dark:text-slate-400">{member.focus}</p>
 							</div>
-							<p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{member.focus}</p>
 						</button>
 						))}
 					</div>
 			</section>
 
-			<section>
+			<section className="border-t border-slate-200 pt-10 dark:border-slate-800">
 				<h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Visiting Researchers</h2>
-				<div className="mt-6 grid gap-6 md:grid-cols-2">
-					<article className="rounded-2xl border border-dashed border-slate-300 bg-white/60 p-6 text-sm leading-relaxed text-slate-600 dark:border-slate-700 dark:bg-slate-900/20 dark:text-slate-300">
-						There are currently no visiting researchers associated with us.
-					</article>
-				</div>
+				<p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+					There are currently no visiting researchers associated with us.
+				</p>
 			</section>
 
-			<section>
+			<section className="border-t border-slate-200 pt-10 dark:border-slate-800">
 				<h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Alumni</h2>
-				<div className="mt-6 grid gap-6 md:grid-cols-2">
-					<article className="rounded-2xl border border-dashed border-slate-300 bg-white/60 p-6 text-sm leading-relaxed text-slate-600 dark:border-slate-700 dark:bg-slate-900/20 dark:text-slate-300">
-						There are currently no alumni associated with us.
-					</article>
-				</div>
+				<p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+					There are currently no alumni associated with us.
+				</p>
 			</section>
 
 			{activeMember ? <ProfileModal member={activeMember} onClose={handleClose} /> : null}
@@ -455,17 +451,17 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 	return createPortal(
 		<div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8">
-			<div className="absolute inset-0 bg-slate-900/70 backdrop-blur-sm" onClick={onClose} />
+			<div className="absolute inset-0 bg-slate-900/60" onClick={onClose} />
 			<div
 				role="dialog"
 				aria-modal="true"
 				aria-labelledby={headingId}
-				className="relative z-10 w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl dark:bg-slate-950"
+				className="relative z-10 w-full max-w-3xl overflow-hidden rounded-lg border border-slate-200 bg-white shadow-xl dark:border-slate-800 dark:bg-slate-950"
 			>
 				<div className="flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-4 dark:border-slate-800">
 					<div className="flex items-start gap-4">
 						{member.image ? (
-							<div className="relative hidden h-20 w-20 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 sm:block dark:border-slate-800 dark:bg-slate-900">
+							<div className="relative hidden h-16 w-16 overflow-hidden rounded-full bg-slate-100 sm:block dark:bg-slate-800">
 								<img
 											src={`/${member.image.replace(/^\//, "")}`}
 									alt={member.name}
@@ -474,10 +470,10 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 							</div>
 						) : null}
 						<div>
-							<h2 id={headingId} className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+							<h2 id={headingId} className="text-xl font-semibold text-slate-900 dark:text-slate-100">
 								{member.name}
 							</h2>
-							<p className="mt-1 text-sm font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+							<p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
 								{member.role}
 							</p>
 						</div>
@@ -485,7 +481,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 					<button
 						type="button"
 						onClick={onClose}
-						className="rounded-full border border-transparent bg-slate-100 px-3 py-1 text-sm font-medium text-slate-500 transition hover:bg-slate-200 hover:text-slate-700 focus:outline-none focus-visible:ring focus-visible:ring-slate-400/70 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+						className="text-sm text-slate-500 hover:text-slate-900 focus:outline-none dark:text-slate-400 dark:hover:text-slate-100"
 					>
 						Close
 					</button>
@@ -493,7 +489,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 				<div className="max-h-[75vh] overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
 					{member.details?.about ? (
 						<section className="space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">About</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">About</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.about}
 							</p>
@@ -501,24 +497,17 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 					) : null}
 
 					{member.details?.researchFocus?.length ? (
-						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Research Focus</h3>
-							<div className="flex flex-wrap gap-2">
-								{member.details.researchFocus.map((topic) => (
-									<span
-										key={topic}
-										className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300"
-									>
-										{topic}
-									</span>
-								))}
-							</div>
+						<section className="mt-6 space-y-2">
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Research Focus</h3>
+							<p className="text-sm text-slate-700 dark:text-slate-300">
+								{member.details.researchFocus.join(" · ")}
+							</p>
 						</section>
 					) : null}
 
 					{member.details?.education ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Education</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Education</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.education}
 							</p>
@@ -527,12 +516,10 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.researchInterests?.length ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Research Interests</h3>
-							<ul className="grid gap-2 text-sm text-slate-700 dark:text-slate-300 sm:grid-cols-2">
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Research Interests</h3>
+							<ul className="list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
 								{member.details.researchInterests.map((interest) => (
-									<li key={interest} className="rounded-lg border border-slate-200 bg-white px-3 py-2 dark:border-slate-800 dark:bg-slate-900">
-										{interest}
-									</li>
+									<li key={interest}>{interest}</li>
 								))}
 							</ul>
 						</section>
@@ -540,7 +527,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.academicMetrics ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Academic Metrics</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Academic Metrics</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.academicMetrics}
 							</p>
@@ -549,7 +536,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.experience ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Experience</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Experience</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.experience}
 							</p>
@@ -558,7 +545,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.publicationsSummary ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Publications</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Publications</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.publicationsSummary}
 							</p>
@@ -567,7 +554,7 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.awards ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Awards & Recognition</h3>
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Awards & Recognition</h3>
 							<p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
 								{member.details.awards}
 							</p>
@@ -576,12 +563,10 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.collaborators?.length ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Key Collaborators</h3>
-							<ul className="grid gap-2 text-sm text-slate-700 dark:text-slate-300 sm:grid-cols-2">
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Key Collaborators</h3>
+							<ul className="list-disc space-y-1 pl-5 text-sm text-slate-700 dark:text-slate-300">
 								{member.details.collaborators.map((collaborator) => (
-									<li key={collaborator} className="rounded-lg border border-slate-200 bg-white px-3 py-2 dark:border-slate-800 dark:bg-slate-900">
-										{collaborator}
-									</li>
+									<li key={collaborator}>{collaborator}</li>
 								))}
 							</ul>
 						</section>
@@ -589,21 +574,18 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.notablePublications?.length ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Notable Publications</h3>
-							<ul className="space-y-4">
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Notable Publications</h3>
+							<ul className="divide-y divide-slate-200 text-sm dark:divide-slate-800">
 								{member.details.notablePublications.map((publication) => (
-									<li
-										key={publication.title}
-										className="rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm dark:border-slate-800 dark:bg-slate-900"
-									>
-										<p className="font-semibold text-slate-900 dark:text-slate-100">{publication.title}</p>
+									<li key={publication.title} className="py-3 first:pt-0">
+										<p className="font-medium text-slate-900 dark:text-slate-100">{publication.title}</p>
 										{publication.authors ? (
-											<p className="mt-1 text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
+											<p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
 												{publication.authors}
 											</p>
 										) : null}
 										{publication.meta ? (
-											<p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{publication.meta}</p>
+											<p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{publication.meta}</p>
 										) : null}
 									</li>
 								))}
@@ -613,15 +595,15 @@ function ProfileModal({ member, onClose }: ProfileModalProps) {
 
 					{member.details?.links?.length ? (
 						<section className="mt-6 space-y-3">
-							<h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Connect</h3>
-							<div className="flex flex-wrap gap-3">
+							<h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">Connect</h3>
+							<div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
 								{member.details.links.map((link) => (
 									<a
 										key={link.label}
 										href={link.url}
 										target={link.url.startsWith("http") ? "_blank" : undefined}
 										rel={link.url.startsWith("http") ? "noreferrer" : undefined}
-										className="inline-flex items-center justify-center rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-800 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+										className="text-slate-900 underline underline-offset-2 hover:no-underline dark:text-slate-100"
 									>
 										{link.label}
 									</a>

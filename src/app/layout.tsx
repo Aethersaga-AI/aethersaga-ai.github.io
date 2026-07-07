@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.lang ?? "en"}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-white text-slate-900 antialiased dark:bg-[#030b19] dark:text-slate-200`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-gray-100 text-slate-900 antialiased`}
       >
         <SiteHeader config={siteConfig} socials={siteSocials} />
         <main className="flex-1">

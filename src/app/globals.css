@@ -1,25 +1,14 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ─── Base Variables ─── */
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --accent-cyan: #22d3ee;
-  --accent-violet: #a78bfa;
-  --card-bg: rgba(0, 0, 0, 0.025);
-  --card-border: rgba(0, 0, 0, 0.08);
-  --card-hover-border: rgba(34, 211, 238, 0.35);
-}
+/* Force light theme: `dark:` utilities only apply under a `.dark` class,
+   which is never added, so the whole site stays white. */
+@custom-variant dark (&:where(.dark, .dark *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #030b19;
-    --foreground: #e2e8f0;
-    --card-bg: rgba(255, 255, 255, 0.025);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --card-hover-border: rgba(34, 211, 238, 0.35);
-  }
+:root {
+  --background: #242424;
+  --foreground: #f5f5f5;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -30,10 +19,42 @@
 }
 
 body {
-  background: var(--background);
+  position: relative;
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+}
+
+/* Blurred abstract color glows — extends past the viewport so the
+   blur never shows a hard edge */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -120px;
+  z-index: -2;
+  pointer-events: none;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(60rem 40rem at 12% -8%, rgba(99, 132, 199, 0.22), transparent 60%),
+    radial-gradient(52rem 38rem at 92% 4%, rgba(168, 108, 176, 0.20), transparent 58%),
+    radial-gradient(60rem 46rem at 50% 116%, rgba(80, 150, 150, 0.18), transparent 60%);
+  filter: blur(90px);
+}
+
+/* Faint grid overlay that fades toward the edges */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 20%, #000 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse 90% 75% at 50% 20%, #000 20%, transparent 85%);
 }
 
 a {
@@ -62,296 +83,54 @@ a:hover {
   opacity: 1;
 }
 
-/* ═══════════════════════════════════════════════
-   COSMIC THEME — AetherSaga
-   ═══════════════════════════════════════════════ */
+/* ─────────────────────────────────────────────────────────────
+   Uniform gray theme (#595959). Unlayered rules override the
+   Tailwind utility classes used across the pages so every page
+   flips to light-on-gray without editing each file.
+   ───────────────────────────────────────────────────────────── */
 
-/* ─── Keyframes ─── */
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50%       { background-position: 100% 50%; }
+/* Surfaces */
+.bg-gray-100,
+.bg-white,
+.bg-slate-100,
+.bg-slate-800 {
+  background-color: #0c0b0b;
 }
 
-@keyframes spin-slow {
-  to { transform: rotate(360deg); }
+/* Text */
+.text-slate-900 { color: #f5f5f5; }
+.text-slate-700 { color: #ededed; }
+.text-slate-600 { color: #dcdcdc; }
+.text-slate-500 { color: #c4c4c4; }
+.text-slate-400 { color: #b0b0b0; }
+
+.hover\:text-slate-900:hover,
+.hover\:text-slate-100:hover,
+.group:hover .group-hover\:text-slate-100 { color: #ffffff; }
+
+/* Borders & dividers */
+.border-slate-200 { border-color: rgba(255, 255, 255, 0.22); }
+.hover\:border-slate-300:hover { border-color: rgba(255, 255, 255, 0.4); }
+.divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
-@keyframes spin-slow-reverse {
-  to { transform: rotate(-360deg); }
+/* Softer hover shadow that reads on gray */
+.hover\:shadow-slate-200\/60:hover {
+  --tw-shadow-color: rgba(0, 0, 0, 0.35);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
-}
-
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ─── Gradient Text ─── */
-.gradient-text {
-  background: linear-gradient(135deg, #22d3ee 0%, #a78bfa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-animated {
-  background: linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #22d3ee 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-shift 4s linear infinite;
-}
-
-/* ─── Hero Background ─── */
-.cosmic-hero {
-  background:
-    radial-gradient(ellipse at 12% 50%, rgba(34, 211, 238, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 88% 15%, rgba(167, 139, 250, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 55% 95%, rgba(251, 191, 36, 0.03) 0%, transparent 50%);
-}
-
-@media (prefers-color-scheme: dark) {
-  .cosmic-hero {
-    background:
-      radial-gradient(ellipse at 12% 50%, rgba(34, 211, 238, 0.10) 0%, transparent 55%),
-      radial-gradient(ellipse at 88% 15%, rgba(167, 139, 250, 0.10) 0%, transparent 55%),
-      radial-gradient(ellipse at 55% 95%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
-  }
-}
-
-/* ─── Profile Rings (animated orbital rings around image) ─── */
-.profile-ring-outer {
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  border: 1px dashed rgba(34, 211, 238, 0.25);
-  animation: spin-slow 22s linear infinite;
-  pointer-events: none;
-}
-
-.profile-ring-inner {
-  position: absolute;
-  width: 284px;
-  height: 284px;
-  border-radius: 50%;
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  animation: spin-slow-reverse 16s linear infinite;
-  pointer-events: none;
-}
-
-/* Ring dot accent */
-.profile-ring-outer::after {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #22d3ee;
-  box-shadow: 0 0 8px 2px rgba(34, 211, 238, 0.6);
-}
-
-/* ─── Profile Glow ─── */
-.profile-glow {
-  box-shadow:
-    0 0 30px rgba(34, 211, 238, 0.12),
-    0 0 60px rgba(167, 139, 250, 0.08);
-}
-
-/* ─── Placeholder Image ─── */
-.cosmic-placeholder-img {
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(167, 139, 250, 0.08));
-  border: 1px solid rgba(34, 211, 238, 0.2);
-}
-
-/* ─── Buttons ─── */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  background: linear-gradient(135deg, #22d3ee, #a78bfa);
-  padding: 0.625rem 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #050e1d;
-  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 16px rgba(34, 211, 238, 0.25);
-}
-
-.btn-primary:hover {
-  opacity: 0.92;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(34, 211, 238, 0.35);
-  text-decoration: none;
-}
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(34, 211, 238, 0.35);
-  padding: 0.625rem 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #22d3ee;
-  background: transparent;
-  transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(34, 211, 238, 0.1);
-  border-color: rgba(34, 211, 238, 0.55);
-  text-decoration: none;
-}
-
-@media not (prefers-color-scheme: dark) {
-  .btn-secondary {
-    color: #0891b2;
-    border-color: rgba(8, 145, 178, 0.4);
-  }
-  .btn-secondary:hover {
-    background: rgba(8, 145, 178, 0.08);
-    border-color: rgba(8, 145, 178, 0.6);
-  }
-}
-
-/* ─── Stats Bar ─── */
-.stat-bar {
-  background: var(--card-bg);
-  backdrop-filter: blur(8px);
-}
-
-/* ─── Section Eyebrow ─── */
-.section-eyebrow {
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: rgba(34, 211, 238, 0.75);
-}
-
-/* ─── Research Cards ─── */
-.research-card {
-  position: relative;
-  padding: 1.25rem 1.25rem 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  overflow: hidden;
-}
-
-.research-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.04), rgba(167, 139, 250, 0.04));
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.research-card:hover {
-  border-color: var(--card-hover-border);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(34, 211, 238, 0.08);
-}
-
-.research-card:hover::before {
-  opacity: 1;
-}
-
-.research-card-number {
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: rgba(34, 211, 238, 0.65);
-}
-
-/* ─── News Cards ─── */
-.news-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-  padding: 0.75rem 1rem;
-  border-left: 2px solid rgba(34, 211, 238, 0.35);
-  background: var(--card-bg);
-  border-radius: 0 0.625rem 0.625rem 0;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.news-card:hover {
-  border-left-color: rgba(34, 211, 238, 0.75);
-  background: rgba(34, 211, 238, 0.04);
-}
-
-.news-date {
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: rgba(34, 211, 238, 0.7);
-}
-
-/* ─── Publication Cards ─── */
-.pub-card {
-  padding: 1rem 1.125rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.pub-card:hover {
-  border-color: rgba(167, 139, 250, 0.35);
-  background: rgba(167, 139, 250, 0.04);
-}
-
-.pub-badge {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 9999px;
-  padding: 0.15rem 0.55rem;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  font-family: var(--font-geist-mono), monospace;
-}
-
-.pub-badge-year {
-  background: rgba(34, 211, 238, 0.1);
-  color: rgba(34, 211, 238, 0.9);
-  border: 1px solid rgba(34, 211, 238, 0.2);
-}
-
-.pub-badge-venue {
-  background: rgba(167, 139, 250, 0.1);
-  color: rgba(167, 139, 250, 0.9);
-  border: 1px solid rgba(167, 139, 250, 0.2);
-}
-
-.pub-link {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: rgba(34, 211, 238, 0.8);
-  transition: color 0.15s ease;
-  font-family: var(--font-geist-mono), monospace;
-}
-
-.pub-link:hover {
-  color: #22d3ee;
-  text-decoration: none;
+/* Markdown / prose body */
+.prose {
+  --tw-prose-body: #dcdcdc;
+  --tw-prose-headings: #f5f5f5;
+  --tw-prose-bold: #ffffff;
+  --tw-prose-links: #ffffff;
+  --tw-prose-bullets: #b0b0b0;
+  --tw-prose-quotes: #dcdcdc;
+  --tw-prose-quote-borders: rgba(255, 255, 255, 0.25);
+  --tw-prose-code: #f5f5f5;
+  --tw-prose-hr: rgba(255, 255, 255, 0.2);
+  --tw-prose-th-borders: rgba(255, 255, 255, 0.25);
+  --tw-prose-td-borders: rgba(255, 255, 255, 0.18);
 }
