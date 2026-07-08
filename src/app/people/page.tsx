@@ -266,13 +266,45 @@ const MEMBERS: Member[] = [
 		image: "assets/img/profile_pictures/shibam-mandal.png",
 		name: "Shibam Mandal",
 		role: "Research Student",
-		focus: "Computer Vision",
+		focus: "Trustworthy AI, LLM Interpretability, NLP",
 		details: {
-			about: "Shibam focuses on robust perception stacks for autonomous aerial and ground robots.",
-			researchFocus: ["Computer Vision", "Robotics"],
-			education: "B.Tech",
-			researchInterests: ["3D Perception", "Robot Navigation"],
-			links: [{ label: "Email", url: "mailto:shibam.mandal@snu.edu.in" }],
+			about:
+				"Shibam Mandal is a B.Tech CSE (AI/ML) student at Sister Nivedita University researching Trustworthy AI and LLM interpretability—investigating narrative bias and the internal representations of cultural reasoning in transformer models.",
+			researchFocus: [
+				"Trustworthy AI",
+				"Mechanistic Interpretability",
+				"Natural Language Processing",
+				"Bias Mitigation",
+				"Cultural LLMs",
+			],
+			education: "B.Tech CSE (AI/ML) – Sister Nivedita University (CGPA 7.77)",
+			researchInterests: [
+				"Trustworthy AI",
+				"Mechanistic Interpretability",
+				"Bias Mitigation",
+				"Transformers",
+				"Cultural LLMs",
+			],
+			awards:
+				"Best Paper Award at IEEE CIACON 2025 for HCAT-Net (EEG Emotion Classification). 2nd Prize at the BRICS Skills Competition 2025 (Data Analysis & Visualization), Guangzhou, China. Certificate of Outstanding Achievement, SNU Felicitation Program. Shortlisted for the national round of DD Robocon 2025. Led technical and AI/ML workshops impacting 500+ students across university technical communities.",
+			notablePublications: [
+				{
+					title: "The American Palimpsest: Quantifying South Asian English Dialect Erasure in LLMs",
+					authors: "S. Bharati, S. Mandal, S. K. Ghosh, S. Mondal",
+					meta: "Proceedings of the 4th Workshop on Cross-Cultural Considerations in NLP (ACL 2026)",
+				},
+				{
+					title: "Morphological Feature Extraction for Fine-Grained Sorani Kurdish Dialect Identification",
+					authors: "S. Bharati, S. Mandal, S. Majumdar, S. K. Ghosh, S. Mondal",
+					meta: "Proceedings of the 2nd Workshop on NLP for Languages Using Arabic Script (EACL 2026)",
+				},
+				{
+					title: "HCAT-Net: A Novel Hierarchical Cross-Attention Transformer Network for EEG Emotion Classification",
+					authors: "S. Bharati, S. Banerjee, S. Mandal, S. K. Ghosh, S. Mondal, A. Mitra",
+					meta: "2025 International Conference on Computing, Intelligence, and Application (IEEE CIACON 2025)",
+				},
+			],
+			links: [{ label: "Email", url: "mailto:shibammandal603@gmail.com" }],
 		},
 	},
 	{
@@ -345,6 +377,22 @@ const MEMBERS: Member[] = [
 			links: [
 				{ label: "Email", url: "mailto:skoct234@gmail.com" },
 				{ label: "LinkedIn", url: "https://www.linkedin.com/in/sneha-kundu-429488284" },
+			],
+		},
+	},
+	{
+		id: "subhrajit-mukherjee",
+		name: "Subhrajit Mukherjee",
+		role: "Research Student",
+		focus: "NLP, Explainable AI (XAI), RAG",
+		details: {
+			about:
+				"Subhrajit is an undergraduate researcher focused on Natural Language Processing (NLP) and Explainable Artificial Intelligence (XAI). His work explores how large language models reason, represent knowledge, and can be made more transparent and trustworthy. He aims to develop AI systems that are not only capable but also interpretable and accessible to a broader community.",
+			researchFocus: ["Natural Language Processing", "Retrieval-Augmented Generation (RAG)"],
+			researchInterests: ["AI Agents", "Large Language Models"],
+			links: [
+				{ label: "Email", url: "mailto:SubhrajitMukherjee04@gmail.com" },
+				{ label: "LinkedIn", url: "https://www.linkedin.com/in/subhrajit-mkj" },
 			],
 		},
 	},
