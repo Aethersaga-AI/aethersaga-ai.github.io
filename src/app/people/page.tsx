@@ -382,6 +382,7 @@ const MEMBERS: Member[] = [
 	},
 	{
 		id: "subhrajit-mukherjee",
+		image: "assets/img/profile_pictures/subhrajit-mukherjee.png",
 		name: "Subhrajit Mukherjee",
 		role: "Research Student",
 		focus: "NLP, Explainable AI (XAI), RAG",
